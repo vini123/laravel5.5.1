@@ -10,4 +10,11 @@
 chmod -R 777 storage
 ```
 
+### 查看当前laravel版本
+
+```
+app()::VERSION;
+http://xxx.xxx/version
+```
+
 
