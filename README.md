@@ -19,6 +19,8 @@ http://xxx.xxx/version
 
 ### 基本概念
 
+什么是XX,xx有什么用，怎么构建xx。
+
 服务提供者：服务提供者是所有Laravel应用启动的中心，你自己的应用以及所有Laravel的核心服务都是通过服务提供者启动。
 
 所有的服务提供者继承自`Illuminate\Support\ServiceProvider`类。继承该抽象类要求至少在服务提供者中定义一个方法：**register**。在register方法内，你唯一要做的事情就是绑事物到服务容器，不要尝试在其中注册任何时间监听器，路由或者任何其它功能。
