@@ -23,6 +23,12 @@ http://xxx.xxx/version
 
 所有的服务提供者继承自`Illuminate\Support\ServiceProvider`类。继承该抽象类要求至少在服务提供者中定义一个方法：**register**。在register方法内，你唯一要做的事情就是绑事物到服务容器，不要尝试在其中注册任何时间监听器，路由或者任何其它功能。
 
+在一个服务提供者中，可以通过$this->app变量访问容器，然后使用bind方法注册一个绑定，该方法需要两个参数，第一个参数是我们想要注册的类名或接口名称，第二个参数是返回类的实例的闭包。
+
+singleton方法绑定一个只需要解析一次的类或接口到容器，然后接下来对容器的调用将会返回同一个实例。
+
+你还可以使用instance方法绑定一个已存在的对象实例到容器，随后对容器的调用将总是返回给定的实例。
+
 在 `config\app.php` 的 **providers** 中注册服务提供者。而门面是在 **aliases** 中注册。
 
 更多：[http://laravelacademy.org/post/91.html](http://laravelacademy.org/post/91.html)
