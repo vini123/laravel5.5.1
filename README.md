@@ -23,6 +23,8 @@ http://xxx.xxx/version
 
 所有的服务提供者继承自`Illuminate\Support\ServiceProvider`类。继承该抽象类要求至少在服务提供者中定义一个方法：**register**。在register方法内，你唯一要做的事情就是绑事物到服务容器，不要尝试在其中注册任何时间监听器，路由或者任何其它功能。
 
+在 `config\app.php` 的 **providers** 中注册服务提供者。而门面是在 **aliases** 中注册。
+
 更多：[http://laravelacademy.org/post/91.html](http://laravelacademy.org/post/91.html)
 
 ---
